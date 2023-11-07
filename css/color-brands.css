@@ -1,0 +1,80 @@
+.card .color-netflix {
+    background-color: var(--color-netflix);
+}
+
+.card .color-spotify {
+    background-color: var(--color-spotify);
+}
+
+.card .color-f1-tv {
+    background-color: var(--color-f1-tv);
+}
+
+.card .color-hbo-max {
+    background-color: var(--color-hbo-max);
+}
+
+.card .color-apple-music {
+    background-color: var(--color-apple-music);
+}
+
+.card .color-disneyplus-starplus {
+    background-color: var(--color-disneyplus-starplus);
+}
+
+.card .color-tidal {
+    background-color: var(--color-tidal);
+}
+
+.card .color-prime-video {
+    background-color: var(--color-prime-video);
+}
+
+.card .color-deezer {
+    background-color: var(--color-deezer);
+}
+
+.card .color-nvidia-geforce-now {
+    background-color: var(--color-nvidia-geforce-now);
+}
+
+.card .color-playstation-plus {
+    background-color: var(--color-playstation-plus);
+    color: var(--color-secundary) !important;
+}
+
+.card .color-ea-play {
+    background-color: var(--color-ea-play);
+}
+
+.card .color-xbox-game-pass {
+    background-color: var(--color-xbox-game-pass);
+}
+
+.card .color-dropbox {
+    background-color: var(--color-dropbox);
+}
+
+.card .color-one-drive {
+    background-color: var(--color-one-drive);
+}
+
+.card .color-icloud {
+    background-color: var(--color-icloud);
+}
+
+.card .color-google-one {
+    background-color: var(--color-google-one);
+}
+
+.card .color-abobe-creative {
+    background-color: var(--color-adobe-creative);
+}
+
+.card .color-youtube-premium {
+    background-color: var(--color-youtube-premium);
+}
+
+.card .color-personalizado {
+    background: linear-gradient(214deg, rgba(65,15,248,1) 9%, rgba(41,96,251,1) 53%, rgba(25,131,253,1) 69%, rgba(0,185,255,1) 90%);
+}

@@ -1,0 +1,31 @@
+:root {
+    --color-primary: #410FF8;
+    --color-secundary: #252525;
+    --color-white: #fff;
+    --color-fuente-footer: #CACACA;
+
+    --shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.25);
+
+    --color-netflix:#e50914;
+    --color-spotify:#2EBD59;
+    --color-hbo-max:#7720CE;
+    --color-apple-music:#231F20;
+    --color-disneyplus-starplus:#241C32;
+    --color-tidal:#000000;
+    --color-f1-tv:#E10600;
+    --color-personal:#410FF8;
+    --color-prime-video: #232F3E;
+    --color-deezer: #2E5995;
+    --color-nvidia-geforce-now:#77B901;
+    --color-playstation-plus:#FFD630;
+    --color-ea-play:#FF4747;
+    --color-xbox-game-pass:#107C10;
+    --color-dropbox:#0061FF;
+    --color-one-drive:#0078D4;
+    --color-icloud:#3E9DF6;
+    --color-google-one:#5F6368;
+    --color-adobe-creative:#BE4AFC;
+    --color-youtube-premium:#FF0000;
+    
+
+}

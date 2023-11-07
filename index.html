@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Precio Total | Precios de los servicios en Argentina</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- Nav tabs -->
+        <nav>
+            <div class="navbar">
+                <a class="carrito-mobile" href="">Total: $<span id="precio-total-navbar">0,00</span></a>
+                <div class="logo">
+                    <img src="img/logo.svg" alt="">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="section">
+            <h1>Películas, Series y TV</h1>
+            <div class="cards">
+                <div class="card netflix">
+                    <div class="precios-container color-netflix">
+                        <div class="precios" id="netflix"></div>
+                    </div>
+                    <div class="logo" id="logo-netflix">
+                        <img src="img/logo-bands/video/netflix.svg" alt="Logo Netflix">
+                    </div>
+                </div>
+                <div class="card prime-video">
+                    <div class="logo logo-invert">
+                        <img src="img/logo-bands/video/prime-video.svg" alt="Logo Prime Video">
+                    </div>
+                    <div class="precios-container precios-container-invert invert color-prime-video">
+                        <div class="precios" id="prime-video"></div>
+                    </div>
+                </div>
+                <div class="card hbo-max">
+                    <div class="precios-container color-hbo-max">
+                        <div class="precios" id="hbo-max"></div>
+                    </div>
+                    <div class="logo logo">
+                        <img src="img/logo-bands/video/hbo-max.svg" alt="Logo HBO Max">
+                    </div>
+                </div>
+                <div class="card disney-star-plus">
+                    <div class="logo logo-invert">
+                        <img src="img/logo-bands/video/disney+star+.svg" alt="Logo Disney+ & Star+">
+                    </div>
+                    <div class="precios-container precios-container-invert color-disneyplus-starplus">
+                        <div class="precios" id="disney-star-plus"></div>
+                    </div>
+                </div>
+                <div class="card youtube-premium">
+                    <div class="precios-container color-youtube-premium">
+                        <div class="precios" id="youtube-premium"></div>
+                    </div>
+                    <div class="logo">
+                        <img src="img/logo-bands/video/yt-premium.svg" alt="Logo YouTube Premium">
+                    </div>
+                </div>
+            </div>
+            <h1>Música y Podcast</h1>
+            <div class="cards">
+                <div class="card spotify">
+                    <div class="logo logo-invert spotify">
+                        <img src="img/logo-bands/musica/spotify.svg" alt="Logo Spotify">
+                    </div>
+                    <div class="precios-container precios-container-invert color-spotify">
+                        <div class="precios" id="spotify"></div>
+                    </div>
+                </div>
+                <div class="card apple-music">
+                    <div class="precios-container color-apple-music">
+                        <div class="precios" id="apple-music"></div>
+                    </div>
+                    <div class="logo logo">
+                        <img src="img/logo-bands/musica/apple-music.svg" alt="Logo Apple Music">
+                    </div>
+                </div>
+                <div class="card tidal">
+                    <div class="logo logo-invert">
+                        <img src="img/logo-bands/musica/tidal.svg" alt="">
+                    </div>
+                    <div class="precios-container precios-container-invert color-tidal">
+                        <div class="precios" id="tidal"></div>
+                    </div>
+                </div>
+                <div class="card deezer">
+                    <div class="precios-container color-deezer">
+                        <div class="precios" id="deezer"></div>
+                    </div>
+                    <div class="logo logo">
+                        <img src="img/logo-bands/musica/deezer.svg" alt="Logo Deezer">
+                    </div>
+                </div>
+            </div>
+            <h1>Juegos</h1>
+            <div class="cards">
+                <div class="card nvidia-geforce-now">
+                    <div class="logo logo-invert nvidia-geforce-now">
+                        <img src="img/logo-bands/gaming/nvidia-gerforce-now.svg" alt="Logo Nvidia GeForce Now">
+                    </div>
+                    <div class="precios-container precios-container-invert color-nvidia-geforce-now">
+                        <div class="precios" id="nvidia-geforce-now"></div>
+                    </div>
+                </div>
+                <div class="card playstation-plus">
+                    <div class="precios-container color-playstation-plus">
+                        <div class="precios" id="playstation-plus"></div>
+                    </div>
+                    <div class="logo logo">
+                        <img src="img/logo-bands/gaming/playStationplus.svg" alt="Logo Playstatios Plus">
+                    </div>
+                </div>
+                <div class="card ea-play">
+                    <div class="logo logo-invert">
+                        <img src="img/logo-bands/gaming/ea-play.svg" alt="Logo EA Play">
+                    </div>
+                    <div class="precios-container precios-container-invert color-ea-play">
+                        <div class="precios" id="ea-play"></div>
+                    </div>
+                </div>
+                <div class="card xbox-game-pass">
+                    <div class="precios-container color-xbox-game-pass">
+                        <div class="precios" id="xbox-game-pass"></div>
+                    </div>
+                    <div class="logo logo">
+                        <img src="img/logo-bands/gaming/xbox-game-pass.svg" alt="Logo Xbox Game Pass">
+                    </div>
+                </div>
+            </div>
+            <h1>Almacenamiento</h1>
+            <div class="cards">
+                <div class="card dropbox">
+                    <div class="logo logo-invert dropbox">
+                        <img src="img/logo-bands/storage/dropbox.svg" alt="Logo Dropbox">
+                    </div>
+                    <div class="precios-container precios-container-invert color-dropbox">
+                        <div class="precios" id="dropbox"></div>
+                    </div>
+                </div>
+                <div class="card one-drive">
+                    <div class="precios-container color-one-drive">
+                        <div class="precios" id="one-drive"></div>
+                    </div>
+                    <div class="logo logo">
+                        <img src="img/logo-bands/storage/onedrive.svg" alt="Logo OneDrive">
+                    </div>
+                </div>
+                <div class="card icloud">
+                    <div class="logo logo-invert">
+                        <img src="img/logo-bands/storage/icloud.svg" alt="Logo iCloud">
+                    </div>
+                    <div class="precios-container precios-container-invert color-icloud">
+                        <div class="precios" id="icloud"></div>
+                    </div>
+                </div>
+                <div class="card google-one">
+                    <div class="precios-container color-google-one">
+                        <div class="precios" id="google-one"></div>
+                    </div>
+                    <div class="logo logo">
+                        <img src="img/logo-bands/storage/google-one.svg" alt="Loog Google One">
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="container">
+                    <img class="logo-mobile" src="img/logo.svg" alt="Precio Total Logo">
+                    <img class="logo-desktop" src="img/logo-footer-desktop.svg" alt="Precio Total Logo">
+                    <p>©<span id="date-copy"></span> - Todos los derechos reservados</p>
+                    <div class="redes">
+                        <a href=""><i class="bi bi-github"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <div class="carrito-container">
+            <div class="carrito" id="carrito">
+                <div class="list-serv-select" id="list-serv-select"></div>
+                <div class="impuestos">
+                    <h2>Impuestos a aplicar</h2>
+                    <div id="impuestos-0"></div>
+                    <div id="impuestos-1"></div>
+                    <div id="impuestos-2"></div>
+                    <div id="impuestos-3"></div>
+                    <div class="resultado" id="impuestos-4"></div>
+                </div>
+            </div>
+            <div class="carrito-vacio" id="carrito-vacio">
+                <p>Seleccione los servicios y planes que desee</p>
+            </div>
+            <div class="total-final">
+                <h2>Precio final</h2>
+                <p>Con impuestos incluidos = <strong>$<span id="total-final">0,00</span></strong></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- JavaScript-->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
