@@ -15,9 +15,11 @@ body {
     background: -webkit-linear-gradient(214deg, rgba(65, 15, 248, 1) 38%, rgba(41, 96, 251, 1) 53%, rgba(25, 131, 253, 1) 69%, rgba(0, 185, 255, 1) 90%);
     background: linear-gradient(214deg, rgba(65, 15, 248, 1) 38%, rgba(41, 96, 251, 1) 53%, rgba(25, 131, 253, 1) 69%, rgba(0, 185, 255, 1) 90%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#410ff8", endColorstr="#00b9ff", GradientType=1);
-    height: 100vh;
+    height: 100%;
+    padding-bottom: 1rem;
     color: #fff;
 }
+
 
 nav .navbar {
     display: flex;
@@ -95,13 +97,18 @@ strong {
 
 .cards {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
     background-color: var(--color-white);
     border-radius: 1rem;
 }
-
+.cards .categoria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
 .cards .card {
     display: flex;
     justify-content: center;
@@ -111,6 +118,7 @@ strong {
     border-radius: 20px;
     transition: .5s;
     width: 330px;
+    height: 150px;
     min-height: 100px;
     margin-block: .5rem;
 }
@@ -156,11 +164,12 @@ strong {
     width: 50%;
     height: 100%;
     padding: .5rem 1rem;
+    color: var(--color-secundary);
     box-shadow: var(--shadow);
 }
 
 .cards .card .logo img {
-    width: 100px;
+    width: 110px;
 }
 
 .cards .card .logo-invert {
@@ -279,9 +288,16 @@ footer a {
 }
 
 @media screen and (max-width: 991px) {
+    body {
+        padding-bottom: 0;
+    }
     .carrito-container {
+        height: 100%;
+        position:absolute;
+        width: 100%;
+        top: 0rem;
         display: none;
-        height: calc(100vh - 240px);
+        
     }
 
     main {
@@ -295,6 +311,7 @@ footer a {
     .section {
         /* height: calc(100vh - px); */
         background-color: transparent;
+        height: 100%;
     }
 
     .cards {
@@ -310,7 +327,7 @@ footer a {
     .navbar .carrito-mobile {
         display: block;
     }
-
+    
     .navbar .logo img {
         width: 150px;
     }

@@ -18,7 +18,7 @@
     background-color: var(--color-apple-music);
 }
 
-.card .color-disneyplus-starplus {
+.card .color-disney-star-plus {
     background-color: var(--color-disneyplus-starplus);
 }
 
@@ -55,8 +55,8 @@
     background-color: var(--color-dropbox);
 }
 
-.card .color-one-drive {
-    background-color: var(--color-one-drive);
+.card .color-onedrive {
+    background-color: var(--color-onedrive);
 }
 
 .card .color-icloud {
@@ -73,6 +73,9 @@
 
 .card .color-youtube-premium {
     background-color: var(--color-youtube-premium);
+}
+.card .color-paramount-plus {
+    background-color: var(--color-paramount-plus);
 }
 
 .card .color-personalizado {

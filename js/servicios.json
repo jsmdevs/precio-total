@@ -15,7 +15,7 @@
                 "precio": 3999
             }
         ],
-        "categoria": "video",
+        "categoria": "Películas Series y TV",
         "moneda": "peso"
     },
     {
@@ -26,7 +26,7 @@
                 "precio": 580
             }
         ],
-        "categoria": "video",
+        "categoria": "Películas Series y TV",
         "moneda": "peso"
     },
     {
@@ -41,7 +41,7 @@
                 "precio": 699
             }
         ],
-        "categoria": "video",
+        "categoria": "Películas Series y TV",
         "moneda": "peso"
     },
     {
@@ -60,7 +60,7 @@
                 "precio": 1999
             }
         ],
-        "categoria": "video",
+        "categoria": "Películas Series y TV",
         "moneda": "peso"
     },
     {
@@ -83,7 +83,7 @@
                 "precio": 329
             }
         ],
-        "categoria": "musica",
+        "categoria": "Música y Podcast",
         "moneda": "peso"
     },
     {
@@ -102,7 +102,7 @@
                 "precio": 3.99
             }
         ],
-        "categoria": "musica",
+        "categoria": "Música y Podcast",
         "moneda": "dolar"
     },
     {
@@ -125,7 +125,7 @@
                 "precio": 890
             }
         ],
-        "categoria": "musica",
+        "categoria": "Música y Podcast",
         "moneda": "peso"
     },
     {
@@ -144,7 +144,7 @@
                 "precio": 209
             }
         ],
-        "categoria": "musica",
+        "categoria": "Música y Podcast",
         "moneda": "peso"
     },
     {
@@ -163,7 +163,7 @@
                 "precio": 28044
             }
         ],
-        "categoria": "gaming",
+        "categoria": "Gaming",
         "moneda": "peso"
     },
     {
@@ -182,7 +182,7 @@
                 "precio": 11.99
             }
         ],
-        "categoria": "gaming",
+        "categoria": "Gaming",
         "moneda": "dolar"
     },
     {
@@ -197,7 +197,7 @@
                 "precio": 14.99
             }
         ],
-        "categoria": "gaming",
+        "categoria": "Gaming",
         "moneda": "dolar"
     },
     {
@@ -216,7 +216,7 @@
                 "precio": 1499
             }
         ],
-        "categoria": "gaming",
+        "categoria": "Gaming",
         "moneda": "peso"
     },
     {
@@ -239,7 +239,7 @@
                 "precio": 26
             }
         ],
-        "categoria": "storage",
+        "categoria": "Almacenamiento",
         "moneda": "dolar"
     },
     {
@@ -258,7 +258,7 @@
                 "precio": 10.99
             }
         ],
-        "categoria": "storage",
+        "categoria": "Almacenamiento",
         "moneda": "dolar"
     },
     {
@@ -277,18 +277,18 @@
                 "precio": 9.99
             }
         ],
-        "categoria": "storage",
+        "categoria": "Almacenamiento",
         "moneda": "dolar"
     },
     {
-        "nombre": "One Drive",
+        "nombre": "OneDrive",
         "planes": [
             {
                 "nombre": "Básico 100GB",
                 "precio": 229
             }
         ],
-        "categoria": "storage",
+        "categoria": "Almacenamiento",
         "moneda": "peso"
     },
     {
@@ -303,7 +303,18 @@
                 "precio": 699
             }
         ],
-        "categoria": "video",
+        "categoria": "Películas Series y TV",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Paramount Plus",
+        "planes": [
+            {
+                "nombre": "Individual",
+                "precio": 399
+            }
+        ],
+        "categoria": "Películas Series y TV",
         "moneda": "peso"
     }
 ]
