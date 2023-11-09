@@ -1,0 +1,309 @@
+[
+    {
+        "nombre": "Netflix",
+        "planes": [
+            {
+                "nombre": "Básico",
+                "precio": 1649
+            },
+            {
+                "nombre": "Estándar",
+                "precio": 2799
+            },
+            {
+                "nombre": "Premium",
+                "precio": 3999
+            }
+        ],
+        "categoria": "video",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Prime Video",
+        "planes": [
+            {
+                "nombre": "Individual",
+                "precio": 580
+            }
+        ],
+        "categoria": "video",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "HBO Max",
+        "planes": [
+            {
+                "nombre": "Móvil",
+                "precio": 389
+            },
+            {
+                "nombre": "Estándar",
+                "precio": 699
+            }
+        ],
+        "categoria": "video",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Disney Star Plus",
+        "planes": [
+            {
+                "nombre": "Disney+",
+                "precio": 799
+            },
+            {
+                "nombre": "Star+",
+                "precio": 1749
+            },
+            {
+                "nombre": "Combo Disney+ Star+",
+                "precio": 1999
+            }
+        ],
+        "categoria": "video",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Spotify",
+        "planes": [
+            {
+                "nombre": "Individual",
+                "precio": 599
+            },
+            {
+                "nombre": "Duo",
+                "precio": 699
+            },
+            {
+                "nombre": "Familiar",
+                "precio": 999
+            },
+            {
+                "nombre": "Premium Estudiante",
+                "precio": 329
+            }
+        ],
+        "categoria": "musica",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Apple Music",
+        "planes": [
+            {
+                "nombre": "Individual",
+                "precio": 6.49
+            },
+            {
+                "nombre": "Familiar",
+                "precio": 9.99
+            },
+            {
+                "nombre": "Estudiantes",
+                "precio": 3.99
+            }
+        ],
+        "categoria": "musica",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "Tidal",
+        "planes": [
+            {
+                "nombre": "Hi-Fi",
+                "precio": 380
+            },
+            {
+                "nombre": "Hi-Fi Plus",
+                "precio": 570
+            },
+            {
+                "nombre": "Familiar Hi-Fi",
+                "precio": 589
+            },
+            {
+                "nombre": "Familiar Hi-Fi Plus",
+                "precio": 890
+            }
+        ],
+        "categoria": "musica",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Deezer",
+        "planes": [
+            {
+                "nombre": "Premium",
+                "precio": 429
+            },
+            {
+                "nombre": "Familiar",
+                "precio": 719
+            },
+            {
+                "nombre": "Student",
+                "precio": 209
+            }
+        ],
+        "categoria": "musica",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Nvidia GeForce Now",
+        "planes": [
+            {
+                "nombre": "Priority",
+                "precio": 8242
+            },
+            {
+                "nombre": "Pro",
+                "precio": 14842
+            },
+            {
+                "nombre": "Ultra",
+                "precio": 28044
+            }
+        ],
+        "categoria": "gaming",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Playstation Plus",
+        "planes": [
+            {
+                "nombre": "Essential",
+                "precio": 6.99
+            },
+            {
+                "nombre": "Extra",
+                "precio": 10.49
+            },
+            {
+                "nombre": "Ultra",
+                "precio": 11.99
+            }
+        ],
+        "categoria": "gaming",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "EA Play",
+        "planes": [
+            {
+                "nombre": "Estándar",
+                "precio": 0.99
+            },
+            {
+                "nombre": "Pro",
+                "precio": 14.99
+            }
+        ],
+        "categoria": "gaming",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "Xbox Game Pass",
+        "planes": [
+            {
+                "nombre": "PC",
+                "precio": 1199
+            },
+            {
+                "nombre": "Core",
+                "precio": 949
+            },
+            {
+                "nombre": "Ultimate",
+                "precio": 1499
+            }
+        ],
+        "categoria": "gaming",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Dropbox",
+        "planes": [
+            {
+                "nombre": "Plus 2TB",
+                "precio": 9.99
+            },
+            {
+                "nombre": "Essentials 3TB",
+                "precio": 18
+            },
+            {
+                "nombre": "Business 9TB",
+                "precio": 20
+            },
+            {
+                "nombre": "Business Plus 15TB",
+                "precio": 26
+            }
+        ],
+        "categoria": "storage",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "iCloud",
+        "planes": [
+            {
+                "nombre": "50GB",
+                "precio": 0.99
+            },
+            {
+                "nombre": "200GB",
+                "precio": 2.99
+            },
+            {
+                "nombre": "2TB",
+                "precio": 10.99
+            }
+        ],
+        "categoria": "storage",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "Google One",
+        "planes": [
+            {
+                "nombre": "Básico 100GB",
+                "precio": 1.99
+            },
+            {
+                "nombre": "Standard 200GB",
+                "precio": 2.99
+            },
+            {
+                "nombre": "Premium 2TB",
+                "precio": 9.99
+            }
+        ],
+        "categoria": "storage",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "One Drive",
+        "planes": [
+            {
+                "nombre": "Básico 100GB",
+                "precio": 229
+            }
+        ],
+        "categoria": "storage",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "YouTube Premium",
+        "planes": [
+            {
+                "nombre": "Individual",
+                "precio": 389
+            },
+            {
+                "nombre": "Familiar",
+                "precio": 699
+            }
+        ],
+        "categoria": "video",
+        "moneda": "peso"
+    }
+]

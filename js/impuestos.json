@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "IVA 21%",
+        "valor": 0.21
+    },
+    {
+        "nombre": "Impuesto PAIS 8%",
+        "valor": 0.08
+    },
+    {
+        "nombre": "Percepción a cuenta de Ganancias 45%",
+        "valor": 0.45
+    },
+    {
+        "nombre": "Percepción a cuenta de Bienes Personales 25%",
+        "valor": 0.25
+    }
+]

@@ -2,12 +2,13 @@ function procesarImpuestos(impuestosCalculados, servSelect, checked) { // Se pro
     let sumaImp = 0;
     let sumaTotal = 0;
 
-    if (checked) { 
+    if (checked) {
         for (let i = 0; i < impuestos.length; i++) {
-            sumaImp = impuestos[i].valor * servSelect; 
+            sumaImp = impuestos[i].valor * servSelect;
             impuestosCalculados[i].valor += sumaImp // Se agrega el resultado de la operación a un array igual al de los impuestos
             sumaTotal += sumaImp
         }
+
         impuestosCalculados[4].valor += sumaTotal;
         impTotal += sumaTotal;
     } else {
@@ -30,6 +31,9 @@ function procesarImpuestos(impuestosCalculados, servSelect, checked) { // Se pro
 function formatNum(num) {
     let numConvert = num.toFixed(2).replace(/\./g, ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.')
     // Agrega el separador de miles (también reemplaza la coma por un punto), cambia el punto por la coma en los decimales y limita a 2 los números después de la coma.
+    if (precioTotal < -0.00) {
+        precioTotal = 0;
+    }
     return numConvert
 }
 
@@ -43,11 +47,11 @@ function calcImpuestos(moneda, precio) {// Calcula los impuestos para ser mostra
         totalFinal = totalImpuestos + precio; // Suma el total de impuestos con el precio
 
     } else if (moneda === "dolar") {
-        const conversion = precio * monedas[0].valor;
-        impuestos.forEach(e => { 
-            totalImpuestos += conversion * e.valor;
-        });
-        totalFinal = totalImpuestos + conversion;
+            const conversion = precio * dolar;
+            impuestos.forEach(e => {
+                totalImpuestos += conversion * e.valor;
+            });
+            totalFinal = totalImpuestos + conversion;
     }
     return formatNum(totalFinal);
 }
@@ -116,8 +120,8 @@ function mostrarCarrito() {
     if (precioTotal != 0) { // Se muestra el carrito
         let $listServSelect = document.getElementById("list-serv-select")
 
-        $carritoVacio.style.display = "none" 
-        $listServSelect.innerHTML = ""; 
+        $carritoVacio.style.display = "none"
+        $listServSelect.innerHTML = "";
         carrito.forEach((e, i) => {
             let serv = document.createElement("div")
             serv.cassName = `servicio-${i}`
@@ -150,7 +154,7 @@ class ServicioCarrito {
     }
 }
 
-const monedas = [{ divisa: "dolar", valor: 349.98 }];
+let dolar = 350
 
 const impuestos =
     [{ nombre: "IVA 21%", valor: 0.21 },
@@ -178,7 +182,7 @@ const servicios = [
 
     new Servicio("Nvidia GeForce Now", [{ nombre: "Priority", precio: 8242 }, { nombre: "Pro", precio: 14842 }, { nombre: "Ultra", precio: 28044 }], "gaming", "peso"),
 
-    new Servicio("Playstation Plus", [{ nombre: "Essential", precio: 6.99 }, { nombre: "Estra", precio: 10.49 }, { nombre: "Ultra", precio: 11.99 }], "gaming", "dolar"),
+    new Servicio("Playstation Plus", [{ nombre: "Essential", precio: 6.99 }, { nombre: "Extra", precio: 10.49 }, { nombre: "Ultra", precio: 11.99 }], "gaming", "dolar"),
 
     new Servicio("EA Play", [{ nombre: "Estándar", precio: 0.99 }, { nombre: "Pro", precio: 14.99 }], "gaming", "dolar"),
 
@@ -217,11 +221,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (carrito.length != 0) {
         let checkbox
+
         carrito.forEach(e => {
             let serv = e.servicio
             servFormat = formatTexto("min", serv)
+            let $card = document.querySelector(`.${servFormat}`);
             checkbox = document.getElementById(`${servFormat}-${e.plan}`)
             checkbox.checked = true
+            $card.style.transform = 'scale(1.1)';
         });
     }
 
@@ -231,8 +238,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let select = document.querySelector("main");
 
-
-
 select.addEventListener("click", e => {
     if (e.target.tagName === "INPUT" && e.target.type === "checkbox") {
         const plan = e.target.className; // Toma el nombre del plan que se seleccionó
@@ -240,14 +245,15 @@ select.addEventListener("click", e => {
         const servSelect = servicios.find(e => formatTexto("min", e.nombre) === servicioClass); // Busca el servicio seleccionado en el array
 
 
-        if (servSelect) { 
+        if (servSelect) {
             const moneda = servSelect.moneda;
             let servPrecio = servSelect.planes.find(e => e.nombre === plan)?.precio;
             let $card = document.querySelector(`.${servicioClass}`);
 
             if (servPrecio) {
                 if (moneda === "dolar") {
-                    servPrecio = servPrecio * monedas[0].valor
+                    servPrecio = servPrecio * dolar
+                    console.log(dolar)
                 }
 
                 if (e.target.checked) {
@@ -278,9 +284,19 @@ select.addEventListener("click", e => {
     }
 });
 
+
 // Actualiza el año del copyright :)
 
 let date = new Date();
 let copyrightYear = date.getFullYear();
 let copyright = document.getElementById("date-copy");
+
 copyright.innerHTML = copyrightYear;
+
+// async function fetchData() {
+//     const response = await fetch('https://dolarapi.com/v1/dolares/oficial');
+//     const data = await response.json();
+
+//     dolar = data; // Asigna el valor a la variable global dentro del fetch
+// }
+
