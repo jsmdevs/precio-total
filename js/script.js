@@ -137,15 +137,17 @@ function mostrarCarrito() {
 
     $totalFinal.innerHTML = formatNum(precioTotal);
 
-    let $precioSinImp = document.getElementById("precio-total-navbar")
+    let $precioTotal = document.getElementById("precio-total-navbar")
 
-    $precioSinImp.innerText = formatNum(precioTotal)
+    $precioTotal.innerText = formatNum(precioTotal)
 
     let $carrito = document.getElementById("carrito")
 
     let $carritoVacio = document.querySelector(".carrito-vacio")
     let $impContainer = document.querySelector(`.impuestos`)
-    $impContainer.innerHTML = " " 
+    $impContainer.innerHTML = `
+    <h3>Precio sin impuestos: <strong>$${formatNum(precioSinImp)}</strong></h3> 
+    <h2>Impuestos a aplicar</h2>` 
     impuestosCalculados.forEach((e, i) => {
         let imp = document.createElement(`div`)
         imp.classList.add(`impuestos-${i}`)
@@ -199,8 +201,8 @@ let servicios
 let dolar
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-let precioSinImp = JSON.parse(localStorage.getItem('precioTotal') || 0);
-let impTotal = 0;
+let precioSinImp = JSON.parse(localStorage.getItem('precioSinImp') || 0);
+let impTotal = JSON.parse(localStorage.getItem('impTotal') || 0);
 let precioTotal = JSON.parse(localStorage.getItem('precioTotal') || 0);
 let impuestosCalculados = initImpCalculados();
 
@@ -295,7 +297,9 @@ cargarServicios().then(() => {
                             $card.style.transform = 'scale(1.1)';
                             carrito.push(new ServicioCarrito(servSelect.nombre, plan, servPrecio));
                             calcImpuestosCarrito(impuestosCalculados, servPrecio, e.target.checked);
+                            console.log(servPrecio);
                             precioSinImp += servPrecio;
+                            console.log(precioSinImp);
 
                         } else {
                             $card.style.cssText = "scale(1.0); background-color: black;";
@@ -309,6 +313,7 @@ cargarServicios().then(() => {
 
                         localStorage.setItem('precioSinImp', JSON.stringify(precioSinImp));
                         localStorage.setItem('precioTotal', JSON.stringify(precioTotal));
+                        localStorage.setItem('impTotal', JSON.stringify(impTotal));
                         localStorage.setItem('carrito', JSON.stringify(carrito));
                         localStorage.setItem('impuestosCalculados', JSON.stringify(impuestosCalculados));
 
