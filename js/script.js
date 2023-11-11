@@ -18,10 +18,9 @@ async function cotizacionDolar() {
 }
 
 
-function procesarImpuestos(impuestosCalculados, servSelect, checked) { // Se procesan los impuestos para agregar al carrito
+function calcImpuestosCarrito(impuestosCalculados, servSelect, checked) { // Se procesan los impuestos para agregar al carrito
     let sumaImp = 0;
     let sumaTotal = 0;
-
     if (checked) {
         for (let i = 0; i < impuestos.length; i++) {
             sumaImp = impuestos[i].valor * servSelect;
@@ -144,29 +143,31 @@ function mostrarCarrito() {
 
     let $carrito = document.getElementById("carrito")
 
-    let $carritoVacio = document.getElementById("carrito-vacio")
-
+    let $carritoVacio = document.querySelector(".carrito-vacio")
+    let $impContainer = document.querySelector(`.impuestos`)
+    $impContainer.innerHTML = " " 
     impuestosCalculados.forEach((e, i) => {
-        let $imp = document.getElementById(`impuestos-${i}`)
-        $imp.innerHTML = `<p>${e.nombre} = $${formatNum(e.valor)}`;
+        let imp = document.createElement(`div`)
+        imp.classList.add(`impuestos-${i}`)
+        imp.innerHTML = `<p><strong>${e.nombre}</strong> = $${formatNum(e.valor)}`;
+        $impContainer.appendChild(imp);
     });
 
     if (precioTotal != 0) { // Se muestra el carrito
         let $listServSelect = document.getElementById("list-serv-select")
 
-        $carritoVacio.style.display = "none"
         $listServSelect.innerHTML = "";
         carrito.forEach((e, i) => {
-            let serv = document.createElement("div")
+            let serv = document.createElement("ul")
             serv.cassName = `servicio-${i}`
-            serv.innerHTML = `<p><strong>${e.servicio}</strong> Plan ${e.plan} = $${formatNum(e.precio)}</p>`
+            serv.innerHTML = `<li><strong>${e.servicio}</strong> Plan ${e.plan} = $${formatNum(e.precio)}</li>`
             $listServSelect.appendChild(serv);
-
+            $listServSelect.style.display = "block"
         })
-        $carrito.style.display = "block"
+        $listServSelect.style.display = "block"
     } else { // Si el carrito está vacío oculta los datos del carrito
-        let $carrito = document.getElementById("carrito");
-        $carrito.style.display = "none"
+        let $listServSelect = document.getElementById("list-serv-select")
+        $listServSelect.style.display = "none"
         $carritoVacio.style.display = "block"
     }
 }
@@ -216,7 +217,6 @@ cargarServicios().then(() => {
             $servicios.append(tituloCateg)
             $servicios.appendChild($categoria);
         })
-        //Carga de los servicios al HTML
 
         servicios.forEach((s, i) => { 
             let $cardCateg = document.querySelector(`.${formatTexto("min", s.categoria)}`);
@@ -293,15 +293,14 @@ cargarServicios().then(() => {
 
                         if (e.target.checked) {
                             $card.style.transform = 'scale(1.1)';
-                            const servicio = formatTexto("may", servicioClass);
-                            carrito.push(new ServicioCarrito(servicio, plan, servPrecio));
-                            procesarImpuestos(impuestosCalculados, servPrecio, e.target.checked);
+                            carrito.push(new ServicioCarrito(servSelect.nombre, plan, servPrecio));
+                            calcImpuestosCarrito(impuestosCalculados, servPrecio, e.target.checked);
                             precioSinImp += servPrecio;
 
                         } else {
                             $card.style.cssText = "scale(1.0); background-color: black;";
                             carrito = carrito.filter(c => c.plan !== plan);
-                            procesarImpuestos(impuestosCalculados, servPrecio, e.target.checked);
+                            calcImpuestosCarrito(impuestosCalculados, servPrecio, e.target.checked);
                             precioSinImp -= servPrecio;
                             precioTotal - precioSinImp;
                         }
@@ -329,3 +328,14 @@ let copyrightYear = date.getFullYear();
 let copyright = document.getElementById("date-copy");
 
 copyright.innerHTML = copyrightYear;
+
+let prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("menu").style.top = "0";
+            } else {
+                document.getElementById("menu").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
+        }

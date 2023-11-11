@@ -77,6 +77,51 @@
 .card .color-paramount-plus {
     background-color: var(--color-paramount-plus);
 }
+.card .color-amazon-music {
+    background-color: var(--color-amazon-music);
+}
+.card .color-youtube-music {
+    background-color: var(--color-youtube-music);
+}
+.card .color-nintendo-online {
+    background-color: var(--color-nintendo-online);
+}
+.card .color-apple-arcade {
+    background-color: var(--color-apple-arcade);
+}
+.card .color-qobuz {
+    background-color: var(--color-apple-arcade);
+}
+.card .color-mega {
+    background-color: var(--color-mega);
+}
+.card .color-crunchyroll {
+    background-color: var(--color-crunchyroll);
+}
+.card .color-hulu {
+    background-color: var(--color-hulu);
+}
+.card .color-f1-tv {
+    background-color: var(--color-f1-tv);
+}
+.card .color-adobe-creative {
+    background-color: var(--color-adobe-creative);
+}
+.card .color-microsoft-365 {
+    background-color: var(--color-microsoft-365);
+}
+.card .color-nordvpn {
+    background-color: var(--color-nordvpn);
+}
+.card .color-apple-tv {
+    background-color: var(--color-apple-tv);
+}
+.card .color-google-workspace {
+    background-color: var(--color-google-workspace);
+}
+.card .color-malwarebytes{
+    background-color: var(--color-malwarebytes);
+}
 
 .card .color-personalizado {
     background: linear-gradient(214deg, rgba(65,15,248,1) 9%, rgba(41,96,251,1) 53%, rgba(25,131,253,1) 69%, rgba(0,185,255,1) 90%);

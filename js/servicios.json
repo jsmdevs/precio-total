@@ -87,6 +87,17 @@
         "moneda": "peso"
     },
     {
+        "nombre": "Apple TV",
+        "planes": [
+            {
+                "nombre": "Individual",
+                "precio": 6.99
+            }
+        ],
+        "categoria": "Películas Series y TV",
+        "moneda": "dolar"
+    },
+    {
         "nombre": "Apple Music",
         "planes": [
             {
@@ -106,7 +117,7 @@
         "moneda": "dolar"
     },
     {
-        "nombre": "Tidal",
+        "nombre": "TIDAL",
         "planes": [
             {
                 "nombre": "Hi-Fi",
@@ -167,7 +178,7 @@
         "moneda": "peso"
     },
     {
-        "nombre": "Playstation Plus",
+        "nombre": "PlayStation Plus",
         "planes": [
             {
                 "nombre": "Essential",
@@ -213,7 +224,7 @@
             },
             {
                 "nombre": "Ultimate",
-                "precio": 1499
+                "precio": 1449
             }
         ],
         "categoria": "Gaming",
@@ -275,6 +286,10 @@
             {
                 "nombre": "Premium 2TB",
                 "precio": 9.99
+            },
+            {
+                "nombre": "Premium 5TB",
+                "precio": 24.99
             }
         ],
         "categoria": "Almacenamiento",
@@ -316,5 +331,217 @@
         ],
         "categoria": "Películas Series y TV",
         "moneda": "peso"
+    },
+    {
+        "nombre": "Amazon Music",
+        "planes": [
+            {
+                "nombre": "Unlimited",
+                "precio": 499
+            },
+            {
+                "nombre": "Family",
+                "precio": 749
+            },
+            {
+                "nombre": "Unlimited For Echo",
+                "precio":   99
+            }
+        ],
+        "categoria": "Música y Podcast",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "F1 TV",
+        "planes": [
+            {
+                "nombre": "TV Access",
+                "precio": 2.99
+            },
+            {
+                "nombre": "TV Pro",
+                "precio": 6.99
+            }
+        ],
+        "categoria": "Películas Series y TV",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "YouTube Music",
+        "planes": [
+            {
+                "nombre": "Individual",
+                "precio": 299
+            },
+            {
+                "nombre": "Familiar",
+                "precio": 499
+            }
+        ],
+        "categoria": "Música y Podcast",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Nintendo Online",
+        "planes": [
+            {
+                "nombre": "Individual",
+                "precio": 1529
+            }
+        ],
+        "categoria": "Gaming",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Apple Arcade",
+        "planes": [
+            {
+                "nombre": "Individual",
+                "precio": 6.99
+            }
+        ],
+        "categoria": "Gaming",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "Qobuz",
+        "planes": [
+            {
+                "nombre": "Studio",
+                "precio": 4.19
+            },
+            {
+                "nombre": "Duo",
+                "precio": 6.19
+            },
+            {
+                "nombre": "Family",
+                "precio": 7.59
+            }
+        ],
+        "categoria": "Música y Podcast",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "Crunchyroll",
+        "planes": [
+            {
+                "nombre": "Fan",
+                "precio": 299
+            },
+            {
+                "nombre": "Mega Fan",
+                "precio": 379
+            }
+        ],
+        "categoria": "Películas Series y TV",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Hulu",
+        "planes": [
+            {
+                "nombre": "Hulu (With Ads)",
+                "precio": 7.99
+            },
+            {
+                "nombre": "Hulu (No Ads)",
+                "precio": 17.99
+            }
+        ],
+        "categoria": "Películas Series y TV",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "Adobe Creative",
+        "planes": [
+            {
+                "nombre": "Adobe + Lightroom",
+                "precio": 969
+            },
+            {
+                "nombre": "Premiere Pro",
+                "precio": 3344
+            },
+            {
+                "nombre": "Todas las aplicaciones",
+                "precio": 8435
+            }
+        ],
+        "categoria": "Trabajo",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Microsoft 365",
+        "planes": [
+            {
+                "nombre": "Personal",
+                "precio": 679
+            },
+            {
+                "nombre": "Familiar",
+                "precio": 899
+            }
+        ],
+        "categoria": "Trabajo",
+        "moneda": "peso"
+    },
+    {
+        "nombre": "Google Workspace",
+        "planes": [
+            {
+                "nombre": "Business Stater",
+                "precio": 4.20
+            },
+            {
+                "nombre": "Business Standard",
+                "precio": 9.60
+            },
+            {
+                "nombre": "Business Plus",
+                "precio": 18
+            }
+        ],
+        "categoria": "Trabajo",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "NordVPN",
+        "planes": [
+            {
+                "nombre": "Estandar",
+                "precio": 2.99
+            },
+            {
+                "nombre": "Plus",
+                "precio": 3.99
+            },
+            {
+                "nombre": "Completo",
+                "precio": 4.99
+            }
+        ],
+        "categoria": "Seguridad y VPN",
+        "moneda": "dolar"
+    },
+    {
+        "nombre": "Malwarebytes",
+        "planes": [
+            {
+                "nombre": "Premium",
+                "precio": 3.75
+            },
+            {
+                "nombre": "Premium 2",
+                "precio": 6.67
+            },
+            {
+                "nombre": "Premium + Privacy",
+                "precio": 8.33
+            }
+        ],
+        "categoria": "Seguridad y VPN",
+        "moneda": "dolar"
     }
+
 ]

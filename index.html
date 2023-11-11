@@ -7,24 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
 </head>
 
 <body>
     <header>
         <!-- Nav tabs -->
+
         <nav>
-            <div class="navbar">
-                <a class="carrito-mobile" href="">Total: $<span id="precio-total-navbar">0,00</span></a>
+            <div class="navbar" id="menu">
+                <div class="carrito-mobile-container">
+                    <label class="carrito-mobile-icon" for="btn-carrito"><i class='bx bx-cart'></i></label>
+                    <label class="carrito-mobile-precio" for="btn-carrito" href=""> $<span
+                            id="precio-total-navbar">0,00</span></label>
+                    <i class='bx bx-chevron-down'></i>
+                </div>
                 <div class="logo">
                     <img src="img/logo.svg" alt="">
                 </div>
             </div>
         </nav>
     </header>
+
     <main>
         <div class="section">
             <div class="cards"></div>
+
             <footer>
                 <div class="container">
                     <img class="logo-mobile" src="img/logo.svg" alt="Precio Total Logo">
@@ -39,24 +49,19 @@
                 </div>
             </footer>
         </div>
+
+        <input type="checkbox" class="check-carrito" id="btn-carrito">
         <div class="carrito-container">
             <div class="carrito" id="carrito">
-                <div class="list-serv-select" id="list-serv-select"></div>
+                <div class="carrito-vacio"><p><strong>Servicios seleccionados</strong></p></div>
+                <div class="list-serv-select" id="list-serv-select">
+                </div>
                 <div class="impuestos">
-                    <h2>Impuestos a aplicar</h2>
-                    <div id="impuestos-0"></div>
-                    <div id="impuestos-1"></div>
-                    <div id="impuestos-2"></div>
-                    <div id="impuestos-3"></div>
-                    <div class="resultado" id="impuestos-4"></div>
                 </div>
             </div>
-            <div class="carrito-vacio" id="carrito-vacio">
-                <p>Seleccione los servicios y planes que desee</p>
-            </div>
             <div class="total-final">
-                <h2>Precio final</h2>
-                <p>Con impuestos incluidos = <strong>$<span id="total-final">0,00</span></strong></p>
+                <h2><strong>Precio final</strong></h2>
+                <p>Con impuestos incluidos: <strong>$<span id="total-final">0,00</span></strong></p>
             </div>
         </div>
     </main>
