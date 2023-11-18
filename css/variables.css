@@ -1,6 +1,7 @@
 :root {
     --color-primary: #410FF8;
     --color-secundary: #252525;
+    --color-background: #f1f1f1;
     --color-white: #fff;
     --color-fuente-footer: #CACACA;
 
@@ -42,5 +43,8 @@
     --color-apple-tv:#000;
     --color-google-workspace:#5F6368;
     --color-malwarebytes:#004DDC;
+
+    --color-background-1: #410ff8;
+    --color-background-2: #00b9ff;
 
 }

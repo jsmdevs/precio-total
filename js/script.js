@@ -17,7 +17,6 @@ async function cotizacionDolar() {
     dolar = data; // Asignas el valor a la variable global dentro del fetch
 }
 
-
 function calcImpuestosCarrito(impuestosCalculados, servSelect, checked) { // Se procesan los impuestos para agregar al carrito
     let sumaImp = 0;
     let sumaTotal = 0;
@@ -250,7 +249,7 @@ cargarServicios().then(() => {
             s.planes.forEach(p => {
                 let plan = document.createElement("div");
                 plan.className = `${nomServicio}`
-                plan.innerHTML = `<input class="${p.nombre}" id="${nomServicio}-${p.nombre}" type="checkbox"><p><span class="negrita plan">${p.nombre}</span>: $${calcImpuestos(s.moneda, p.precio)}</p>`;
+                plan.innerHTML = `<input class="${p.nombre}" id="${nomServicio}-${p.nombre}" type="checkbox"><label for="${nomServicio}-${p.nombre}"><span class="negrita plan">${p.nombre}</span>: $${calcImpuestos(s.moneda, p.precio)}</label>`;
                 $planes.appendChild(plan);
             });
         });
@@ -297,9 +296,7 @@ cargarServicios().then(() => {
                             $card.style.transform = 'scale(1.1)';
                             carrito.push(new ServicioCarrito(servSelect.nombre, plan, servPrecio));
                             calcImpuestosCarrito(impuestosCalculados, servPrecio, e.target.checked);
-                            console.log(servPrecio);
                             precioSinImp += servPrecio;
-                            console.log(precioSinImp);
 
                         } else {
                             $card.style.cssText = "scale(1.0); background-color: black;";
