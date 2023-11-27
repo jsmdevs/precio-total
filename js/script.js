@@ -27,7 +27,7 @@ function calcImpuestosCarrito(impuestosCalculados, servSelect, checked) { // Se 
             sumaTotal += sumaImp
         }
 
-        impuestosCalculados[4].valor += sumaTotal;
+        impuestosCalculados[3].valor += sumaTotal;
         impTotal += sumaTotal;
     } else {
         for (let i = 0; i < impuestos.length; i++) {
@@ -38,7 +38,7 @@ function calcImpuestosCarrito(impuestosCalculados, servSelect, checked) { // Se 
                 sumaTotal = 0;
             }
         }
-        impuestosCalculados[4].valor -= sumaTotal // Se agrega el total de los impuestos sumados a un campo adicional en el array
+        impuestosCalculados[3].valor -= sumaTotal // Se agrega el total de los impuestos sumados a un campo adicional en el array
         impTotal -= sumaTotal;
 
         return impuestosCalculados;
@@ -190,10 +190,9 @@ class ServicioCarrito {
     }
 }
 
-const impuestos =
-    [{ nombre: "IVA 21%", valor: 0.21 },
-    { nombre: "Impuesto PAIS 8%", valor: 0.08 },
-    { nombre: "Percepción a cuenta de Ganancias 45%", valor: 0.45 },
+const impuestos =[
+    { nombre: "Impuesto PAIS 30%", valor: 0.30 },
+    { nombre: "Percepción a cuenta de Ganancias 100%", valor: 1 },
     { nombre: "Percepción a cuenta de Bienes Personales 25%", valor: 0.25 }];
 
 let servicios
