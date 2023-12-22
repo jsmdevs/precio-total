@@ -270,6 +270,10 @@ strong {
     gap: .3rem;
 }
 
+.mensaje-precios {
+    font-size: .7rem;
+}
+
 footer {
     padding-inline: 2rem;
     display: flex;

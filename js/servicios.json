@@ -4,15 +4,15 @@
         "planes": [
             {
                 "nombre": "Básico",
-                "precio": 1649
+                "precio": 2499
             },
             {
                 "nombre": "Estándar",
-                "precio": 2799
+                "precio": 4199
             },
             {
                 "nombre": "Premium",
-                "precio": 3999
+                "precio": 5799
             }
         ],
         "categoria": "Películas Series y TV",
@@ -216,15 +216,15 @@
         "planes": [
             {
                 "nombre": "PC",
-                "precio": 1199
+                "precio": 5399
             },
             {
                 "nombre": "Core",
-                "precio": 949
+                "precio": 4299
             },
             {
                 "nombre": "Ultimate",
-                "precio": 1449
+                "precio": 6999
             }
         ],
         "categoria": "Gaming",

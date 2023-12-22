@@ -65,7 +65,7 @@ function calcImpuestos(moneda, precio) {// Calcula los impuestos para ser mostra
         totalFinal = totalImpuestos + precio; // Suma el total de impuestos con el precio
 
     } else if (moneda === "dolar") {
-        const conversion = precio * dolar.compra;
+        const conversion = precio * dolar.venta;
         impuestos.forEach(e => {
             totalImpuestos += conversion * e.valor;
         });
@@ -145,7 +145,7 @@ function mostrarCarrito() {
     let $carritoVacio = document.querySelector(".carrito-vacio")
     let $impContainer = document.querySelector(`.impuestos`)
     $impContainer.innerHTML = `
-    <h3>Precio sin impuestos: <strong>$${formatNum(precioSinImp)}</strong></h3> 
+    <h3>Total sin impuestos: <strong>$${formatNum(precioSinImp)}</strong></h3> 
     <h2>Impuestos a aplicar</h2>` 
     impuestosCalculados.forEach((e, i) => {
         let imp = document.createElement(`div`)
@@ -191,9 +191,9 @@ class ServicioCarrito {
 }
 
 const impuestos =[
-    { nombre: "Impuesto PAIS 30%", valor: 0.30 },
-    { nombre: "Percepción a cuenta de Ganancias 100%", valor: 1 },
-    { nombre: "Percepción a cuenta de Bienes Personales 25%", valor: 0.25 }];
+    { nombre: "Impuesto PAIS 8%", valor: 0.08 },
+    { nombre: "Percepción a cuenta de Ganancias 30%", valor: 0.30 },
+    { nombre: "IVA 21%", valor: 0.21 }];
 
 let servicios
 let dolar
@@ -288,7 +288,7 @@ cargarServicios().then(() => {
 
                     if (servPrecio) {
                         if (moneda === "dolar") {
-                            servPrecio = servPrecio * dolar.compra
+                            servPrecio = servPrecio * dolar.venta
                         }
 
                         if (e.target.checked) {
@@ -329,14 +329,3 @@ let copyrightYear = date.getFullYear();
 let copyright = document.getElementById("date-copy");
 
 copyright.innerHTML = copyrightYear;
-
-let prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("menu").style.top = "0";
-            } else {
-                document.getElementById("menu").style.top = "-50px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
