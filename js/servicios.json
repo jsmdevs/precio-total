@@ -30,15 +30,19 @@
         "moneda": "peso"
     },
     {
-        "nombre": "HBO Max",
+        "nombre": "Max",
         "planes": [
             {
-                "nombre": "Móvil",
-                "precio": 389
+                "nombre": "Básico con anuncios",
+                "precio": 2190
             },
             {
                 "nombre": "Estándar",
-                "precio": 699
+                "precio": 2890
+            },
+            {
+                "nombre": "Platino",
+                "precio": 3490
             }
         ],
         "categoria": "Películas Series y TV",
@@ -68,19 +72,19 @@
         "planes": [
             {
                 "nombre": "Individual",
-                "precio": 599
+                "precio": 1299
             },
             {
                 "nombre": "Duo",
-                "precio": 699
+                "precio": 1699
             },
             {
                 "nombre": "Familiar",
-                "precio": 999
+                "precio": 2199
             },
             {
                 "nombre": "Premium Estudiante",
-                "precio": 329
+                "precio": 699
             }
         ],
         "categoria": "Música y Podcast",
@@ -102,15 +106,15 @@
         "planes": [
             {
                 "nombre": "Individual",
-                "precio": 6.49
+                "precio": 3.29
             },
             {
                 "nombre": "Familiar",
-                "precio": 9.99
+                "precio": 5.49
             },
             {
                 "nombre": "Estudiantes",
-                "precio": 3.99
+                "precio": 2.99
             }
         ],
         "categoria": "Música y Podcast",
@@ -120,20 +124,16 @@
         "nombre": "TIDAL",
         "planes": [
             {
-                "nombre": "Hi-Fi",
+                "nombre": "Individual",
                 "precio": 380
             },
             {
-                "nombre": "Hi-Fi Plus",
+                "nombre": "Individual + Ext. DJ",
                 "precio": 570
             },
             {
-                "nombre": "Familiar Hi-Fi",
+                "nombre": "Familiar",
                 "precio": 589
-            },
-            {
-                "nombre": "Familiar Hi-Fi Plus",
-                "precio": 890
             }
         ],
         "categoria": "Música y Podcast",
@@ -300,7 +300,7 @@
         "planes": [
             {
                 "nombre": "Básico 100GB",
-                "precio": 229
+                "precio": 879
             }
         ],
         "categoria": "Almacenamiento",
@@ -371,11 +371,11 @@
         "planes": [
             {
                 "nombre": "Individual",
-                "precio": 299
+                "precio": 599
             },
             {
                 "nombre": "Familiar",
-                "precio": 499
+                "precio": 999
             }
         ],
         "categoria": "Música y Podcast",
@@ -476,11 +476,11 @@
         "planes": [
             {
                 "nombre": "Personal",
-                "precio": 679
+                "precio": 2599
             },
             {
                 "nombre": "Familiar",
-                "precio": 899
+                "precio": 3499
             }
         ],
         "categoria": "Trabajo",
