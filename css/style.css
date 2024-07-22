@@ -127,6 +127,12 @@ strong {
     border-radius: 1rem;
 }
 
+.cards .titulo {
+    padding-bottom: 1rem;
+    border-bottom: solid 3px var(--color-secundary);
+    transition: all .2s;
+}
+
 .cards .categoria {
     display: flex;
     flex-wrap: wrap;
@@ -146,6 +152,9 @@ strong {
     min-height: 150px;
     min-height: 130px;
     margin-block: .5rem;
+    box-shadow:
+  0px 0px 20px rgba(0, 0, 0, 0.20)
+;
 }
 
 .cards .card .precios-container {
@@ -345,6 +354,7 @@ footer a {
         transition: .2s;
         padding: 2rem .8rem;
         box-shadow: var(--shadow);
+        cursor: pointer;
     }
 
     .carrito-container p {
@@ -387,6 +397,10 @@ footer a {
     .cards .card {
         width: 330px;
         height: auto;
+    }
+    .titulo{
+        padding: 1rem !important;
+        border: none !important;
     }
 
 

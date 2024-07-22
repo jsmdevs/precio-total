@@ -17,31 +17,36 @@ async function cotizacionDolar() {
     dolar = data; // Asignas el valor a la variable global dentro del fetch
 }
 
-function calcImpuestosCarrito(impuestosCalculados, servSelect, checked) { // Se procesan los impuestos para agregar al carrito
+function calcImpuestosCarrito(impuestosCalculados, servSelect, imp, checked) { // Se procesan los impuestos para agregar al carrito
     let sumaImp = 0;
     let sumaTotal = 0;
     if (checked) {
-        for (let i = 0; i < impuestos.length; i++) {
-            sumaImp = impuestos[i].valor * servSelect;
-            impuestosCalculados[i].valor += sumaImp // Se agrega el resultado de la operación a un array igual al de los impuestos
-            sumaTotal += sumaImp
+        if (imp === true) {
+            impuestos.forEach((elem, i) => {
+                sumaImp = elem.valor * servSelect;
+                impuestosCalculados[i].valor += sumaImp // Se agrega el resultado de la operación a un array igual al de los impuestos
+                sumaTotal += sumaImp
+            })
+            impuestosCalculados[3].valor += sumaTotal;
         }
-
-        impuestosCalculados[3].valor += sumaTotal;
         impTotal += sumaTotal;
     } else {
-        for (let i = 0; i < impuestos.length; i++) {
-            sumaImp = impuestos[i].valor * servSelect;
-            impuestosCalculados[i].valor -= sumaImp;
-            sumaTotal += sumaImp
-            if (sumaTotal < 0) {
-                sumaTotal = 0;
-            }
+        console.log(imp)
+        if (imp === true) {
+            impuestos.forEach((elem, i) => {
+                console.log('a')
+                sumaImp = elem.valor * servSelect;
+                impuestosCalculados[i].valor -= sumaImp;
+                sumaTotal += sumaImp
+                if (sumaTotal < 0) {
+                    sumaTotal = 0;
+                }
+            });
+            impuestosCalculados[3].valor -= sumaTotal // Se agrega el total de los impuestos sumados a un campo adicional en el array
+            impTotal -= sumaTotal;
         }
-        impuestosCalculados[3].valor -= sumaTotal // Se agrega el total de los impuestos sumados a un campo adicional en el array
-        impTotal -= sumaTotal;
 
-        return impuestosCalculados;
+        return impTotal;
     }
 
 }
@@ -65,11 +70,11 @@ function calcImpuestos(moneda, precio, imp) {// Calcula los impuestos para ser m
                 totalImpuestos += precio * e.valor;
             });
             totalFinal = totalImpuestos + precio; // Suma el total de impuestos con el precio
-        }else{
+        } else {
             console.log('a')
             totalFinal = precio
         }
-        
+
     } else if (moneda === "dolar") {
         const conversion = precio * dolar.venta;
         impuestos.forEach(e => {
@@ -219,6 +224,7 @@ cargarServicios().then(() => {
             let $categoria = document.createElement("div");
             let tituloCateg = document.createElement("div")
             $categoria.classList.add(`categoria`, formatTexto("min", categ))
+            tituloCateg.classList.add(`titulo`)
             tituloCateg.innerHTML = `<h1>${categ}</h1>`
             $servicios.append(tituloCateg)
             $servicios.appendChild($categoria);
@@ -290,6 +296,7 @@ cargarServicios().then(() => {
 
                 if (servSelect) {
                     const moneda = servSelect.moneda;
+                    const imp = servSelect.impuestos
                     let servPrecio = servSelect.planes.find(e => e.nombre === plan)?.precio;
                     let $card = document.querySelector(`.${servicioClass}`);
 
@@ -301,13 +308,13 @@ cargarServicios().then(() => {
                         if (e.target.checked) {
                             $card.style.transform = 'scale(1.1)';
                             carrito.push(new ServicioCarrito(servSelect.nombre, plan, servPrecio));
-                            calcImpuestosCarrito(impuestosCalculados, servPrecio, e.target.checked);
+                            calcImpuestosCarrito(impuestosCalculados, servPrecio, imp, e.target.checked);
                             precioSinImp += servPrecio;
 
                         } else {
                             $card.style.cssText = "scale(1.0); background-color: black;";
                             carrito = carrito.filter(c => c.plan !== plan);
-                            calcImpuestosCarrito(impuestosCalculados, servPrecio, e.target.checked);
+                            console.log(calcImpuestosCarrito(impuestosCalculados, servPrecio,imp, e.target.checked))
                             precioSinImp -= servPrecio;
                             precioTotal - precioSinImp;
                         }
