@@ -55,15 +55,21 @@ function formatNum(num) {
     return numConvert
 }
 
-function calcImpuestos(moneda, precio) {// Calcula los impuestos para ser mostrados
+function calcImpuestos(moneda, precio, imp) {// Calcula los impuestos para ser mostrados
     let totalImpuestos = 0;
     let totalFinal = 0;
+    console.log(imp)
     if (moneda === "peso") {
-        impuestos.forEach(e => { // Calcula el precio del servicio con el porcentaje de impuestos
-            totalImpuestos += precio * e.valor;
-        });
-        totalFinal = totalImpuestos + precio; // Suma el total de impuestos con el precio
-
+        if (imp === true) {
+            impuestos.forEach(e => { // Calcula el precio del servicio con el porcentaje de impuestos
+                totalImpuestos += precio * e.valor;
+            });
+            totalFinal = totalImpuestos + precio; // Suma el total de impuestos con el precio
+        }else{
+            console.log('a')
+            totalFinal = precio
+        }
+        
     } else if (moneda === "dolar") {
         const conversion = precio * dolar.venta;
         impuestos.forEach(e => {
@@ -146,7 +152,7 @@ function mostrarCarrito() {
     let $impContainer = document.querySelector(`.impuestos`)
     $impContainer.innerHTML = `
     <h3>Total sin impuestos: <strong>$${formatNum(precioSinImp)}</strong></h3> 
-    <h2>Impuestos a aplicar</h2>` 
+    <h2>Impuestos a aplicar</h2>`
     impuestosCalculados.forEach((e, i) => {
         let imp = document.createElement(`div`)
         imp.classList.add(`impuestos-${i}`)
@@ -190,7 +196,7 @@ class ServicioCarrito {
     }
 }
 
-const impuestos =[
+const impuestos = [
     { nombre: "Impuesto PAIS 8%", valor: 0.08 },
     { nombre: "Percepción a cuenta de Ganancias 30%", valor: 0.30 },
     { nombre: "IVA 21%", valor: 0.21 }];
@@ -212,13 +218,13 @@ cargarServicios().then(() => {
         categorias.forEach(categ => {
             let $categoria = document.createElement("div");
             let tituloCateg = document.createElement("div")
-            $categoria.classList.add(`categoria` ,formatTexto("min", categ))
+            $categoria.classList.add(`categoria`, formatTexto("min", categ))
             tituloCateg.innerHTML = `<h1>${categ}</h1>`
             $servicios.append(tituloCateg)
             $servicios.appendChild($categoria);
         })
 
-        servicios.forEach((s, i) => { 
+        servicios.forEach((s, i) => {
             let $cardCateg = document.querySelector(`.${formatTexto("min", s.categoria)}`);
             let categServicio = formatTexto("min", s.categoria)
             let $card = document.createElement("div");
@@ -247,8 +253,9 @@ cargarServicios().then(() => {
             let $planes = document.getElementById(`${nomServicio}`);
             s.planes.forEach(p => {
                 let plan = document.createElement("div");
+                console.log(s.impuestos)
                 plan.className = `${nomServicio}`
-                plan.innerHTML = `<input class="${p.nombre}" id="${nomServicio}-${p.nombre}" type="checkbox"><label for="${nomServicio}-${p.nombre}"><span class="negrita plan">${p.nombre}</span>: $${calcImpuestos(s.moneda, p.precio)}</label>`;
+                plan.innerHTML = `<input class="${p.nombre}" id="${nomServicio}-${p.nombre}" type="checkbox"><label for="${nomServicio}-${p.nombre}"><span class="negrita plan">${p.nombre}</span>: $${calcImpuestos(s.moneda, p.precio, s.impuestos)}</label>`;
                 $planes.appendChild(plan);
             });
         });

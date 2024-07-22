@@ -18,8 +18,8 @@
     background-color: var(--color-apple-music);
 }
 
-.card .color-disney-star-plus {
-    background-color: var(--color-disneyplus-starplus);
+.card .color-disney-plus {
+    background-color: var(--color-disneyplus);
 }
 
 .card .color-tidal {

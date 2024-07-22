@@ -4,66 +4,66 @@
         "planes": [
             {
                 "nombre": "Básico",
-                "precio": 2499
+                "precio": 4299
             },
             {
                 "nombre": "Estándar",
-                "precio": 4199
+                "precio": 7199
             },
             {
                 "nombre": "Premium",
-                "precio": 5799
+                "precio": 9699
             }
         ],
         "categoria": "Películas Series y TV",
-        "moneda": "peso"
+        "moneda": "peso",
+        "impuestos":true
     },
     {
         "nombre": "Prime Video",
         "planes": [
             {
                 "nombre": "Individual",
-                "precio": 580
+                "precio": 3499
             }
         ],
         "categoria": "Películas Series y TV",
-        "moneda": "peso"
+        "moneda": "peso",
+        "impuestos":true
     },
     {
         "nombre": "Max",
         "planes": [
             {
                 "nombre": "Básico con anuncios",
-                "precio": 2190
+                "precio": 3990
             },
             {
                 "nombre": "Estándar",
-                "precio": 2890
+                "precio": 4990
             },
             {
                 "nombre": "Platino",
-                "precio": 3490
+                "precio": 5990
             }
         ],
+        "impuestos":true,
         "categoria": "Películas Series y TV",
         "moneda": "peso"
     },
     {
-        "nombre": "Disney Star Plus",
+        "nombre": "Disney Plus",
         "planes": [
             {
-                "nombre": "Disney+",
-                "precio": 799
+                "nombre": "Estandar",
+                "precio": 7399
             },
             {
-                "nombre": "Star+",
-                "precio": 1749
-            },
-            {
-                "nombre": "Combo Disney+ Star+",
-                "precio": 1999
+                "nombre": "Premium",
+                "precio": 10549
             }
         ],
+        "impuestos":false,
         "categoria": "Películas Series y TV",
         "moneda": "peso"
     },
@@ -87,6 +87,7 @@
                 "precio": 699
             }
         ],
+        "impuestos":true,
         "categoria": "Música y Podcast",
         "moneda": "peso"
     },
@@ -98,6 +99,7 @@
                 "precio": 6.99
             }
         ],
+        "impuestos":true,
         "categoria": "Películas Series y TV",
         "moneda": "dolar"
     },
@@ -117,6 +119,7 @@
                 "precio": 2.99
             }
         ],
+        "impuestos":true,
         "categoria": "Música y Podcast",
         "moneda": "dolar"
     },
@@ -136,6 +139,7 @@
                 "precio": 589
             }
         ],
+        "impuestos":true,
         "categoria": "Música y Podcast",
         "moneda": "peso"
     },
@@ -155,6 +159,7 @@
                 "precio": 209
             }
         ],
+        "impuestos":true,
         "categoria": "Música y Podcast",
         "moneda": "peso"
     },
@@ -162,18 +167,23 @@
         "nombre": "Nvidia GeForce Now",
         "planes": [
             {
+                "nombre": "Day Pass",
+                "precio": 5700
+            },
+            {
                 "nombre": "Priority",
-                "precio": 8242
+                "precio": 19000
             },
             {
                 "nombre": "Pro",
-                "precio": 14842
+                "precio": 38000
             },
             {
                 "nombre": "Ultra",
-                "precio": 28044
+                "precio": 76000
             }
         ],
+        "impuestos":false,
         "categoria": "Gaming",
         "moneda": "peso"
     },
@@ -193,6 +203,7 @@
                 "precio": 11.99
             }
         ],
+        "impuestos":true,
         "categoria": "Gaming",
         "moneda": "dolar"
     },
@@ -208,6 +219,7 @@
                 "precio": 14.99
             }
         ],
+        "impuestos":true,
         "categoria": "Gaming",
         "moneda": "dolar"
     },
@@ -216,17 +228,18 @@
         "planes": [
             {
                 "nombre": "PC",
-                "precio": 5399
+                "precio": 5999
             },
             {
                 "nombre": "Core",
-                "precio": 4299
+                "precio": 6999
             },
             {
                 "nombre": "Ultimate",
-                "precio": 6999
+                "precio": 10999
             }
         ],
+        "impuestos":true,
         "categoria": "Gaming",
         "moneda": "peso"
     },
@@ -250,6 +263,7 @@
                 "precio": 26
             }
         ],
+        "impuestos":true,
         "categoria": "Almacenamiento",
         "moneda": "dolar"
     },
@@ -269,6 +283,7 @@
                 "precio": 10.99
             }
         ],
+        "impuestos":true,
         "categoria": "Almacenamiento",
         "moneda": "dolar"
     },
@@ -292,6 +307,7 @@
                 "precio": 24.99
             }
         ],
+        "impuestos":true,
         "categoria": "Almacenamiento",
         "moneda": "dolar"
     },
@@ -303,6 +319,7 @@
                 "precio": 879
             }
         ],
+        "impuestos":true,
         "categoria": "Almacenamiento",
         "moneda": "peso"
     },
@@ -311,13 +328,14 @@
         "planes": [
             {
                 "nombre": "Individual",
-                "precio": 389
+                "precio": 1899
             },
             {
                 "nombre": "Familiar",
-                "precio": 699
+                "precio": 3699
             }
         ],
+        "impuestos":true,
         "categoria": "Películas Series y TV",
         "moneda": "peso"
     },
@@ -326,9 +344,10 @@
         "planes": [
             {
                 "nombre": "Individual",
-                "precio": 399
+                "precio": 1321.49
             }
         ],
+        "impuestos":true,
         "categoria": "Películas Series y TV",
         "moneda": "peso"
     },
@@ -348,6 +367,7 @@
                 "precio":   99
             }
         ],
+        "impuestos":true,
         "categoria": "Música y Podcast",
         "moneda": "peso"
     },
@@ -363,6 +383,7 @@
                 "precio": 6.99
             }
         ],
+        "impuestos":true,
         "categoria": "Películas Series y TV",
         "moneda": "dolar"
     },
@@ -371,13 +392,14 @@
         "planes": [
             {
                 "nombre": "Individual",
-                "precio": 599
+                "precio": 1299
             },
             {
                 "nombre": "Familiar",
-                "precio": 999
+                "precio": 2199
             }
         ],
+        "impuestos":true,
         "categoria": "Música y Podcast",
         "moneda": "peso"
     },
@@ -386,9 +408,10 @@
         "planes": [
             {
                 "nombre": "Individual",
-                "precio": 1529
+                "precio": 3839
             }
         ],
+        "impuestos":true,
         "categoria": "Gaming",
         "moneda": "peso"
     },
@@ -419,6 +442,7 @@
                 "precio": 7.59
             }
         ],
+        "impuestos":true,
         "categoria": "Música y Podcast",
         "moneda": "dolar"
     },
@@ -427,13 +451,14 @@
         "planes": [
             {
                 "nombre": "Fan",
-                "precio": 299
+                "precio": 3499
             },
             {
                 "nombre": "Mega Fan",
-                "precio": 379
+                "precio": 4399
             }
         ],
+        "impuestos":true,
         "categoria": "Películas Series y TV",
         "moneda": "peso"
     },
@@ -449,6 +474,7 @@
                 "precio": 17.99
             }
         ],
+        "impuestos":true,
         "categoria": "Películas Series y TV",
         "moneda": "dolar"
     },
@@ -468,6 +494,7 @@
                 "precio": 8435
             }
         ],
+        "impuestos":false,
         "categoria": "Trabajo",
         "moneda": "peso"
     },
@@ -483,6 +510,7 @@
                 "precio": 3499
             }
         ],
+        "impuestos":true,
         "categoria": "Trabajo",
         "moneda": "peso"
     },
@@ -502,6 +530,7 @@
                 "precio": 18
             }
         ],
+        "impuestos":true,
         "categoria": "Trabajo",
         "moneda": "dolar"
     },
@@ -521,6 +550,7 @@
                 "precio": 4.99
             }
         ],
+        "impuestos":true,
         "categoria": "Seguridad y VPN",
         "moneda": "dolar"
     },
@@ -540,6 +570,7 @@
                 "precio": 8.33
             }
         ],
+        "impuestos":true,
         "categoria": "Seguridad y VPN",
         "moneda": "dolar"
     }
